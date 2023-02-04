@@ -17,17 +17,23 @@ For simplicity, I used the local registry to build my docker image instead of pu
 - Pre prerequisite
     1. docker installed on your machine  
     
-- Steps	
-    1. windows : 
+  - Steps
+
+      * windows : 
+      
         a. Double-click on start.bat
+
         b. After all thing is done just open your browser and
-                navigate to http://localhost:9999/swagger-ui/index.html#/       
-                that will take you to openApi documentations (swagger).
-    2. linux : 
-            a. Run file start.sh 
-            b. After all thing is done just open your browser and 
-                    navigate to http://localhost:9999/swagger-ui/index.html#/ 
-                    that will take you to openApi documentations (swagger).
+              navigate to http://localhost:9999/swagger-ui/index.html#/       
+              that will take you to openApi documentations (swagger).
+      * linux : 
+    
+        a. Run file start.sh
+    
+        b. After all thing is done just open your browser and 
+               navigate to http://localhost:9999/swagger-ui/index.html#/ 
+               that will take you to openApi documentations (swagger).
+            
 
 ## Recommendation 
  1. Add security layer to the web service for authentication and authorizetion 
