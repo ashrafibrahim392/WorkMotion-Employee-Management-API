@@ -9,15 +9,15 @@ It's need some improvement to be better.
 	1. java 11
 	2. spring boot 2.7.8
 	3. spring state machine 
-	4. h2 data base 
+	4. h2 database 
 
 ## How to start application ?
     For simplicity I used the local registry to build my docker image instead of pushing it to remote one.  
 
-	- pre prerequisite
+	- Pre prerequisite
 		1. docker installed on your machine  
 		
-    - steps	
+    - Steps	
 		1. windows : 
 			a. Double click on start.bat
 			b. After all thing is done just open your browser and navigate to http://localhost:9999/swagger-ui/index.html#/ that will take you to openApi documentations (swagger).
@@ -30,7 +30,7 @@ It's need some improvement to be better.
 	 It's recommended to run this service with any orchestration tool (Kubernetes , EKS , .... ) to have our service scalability and availability 
 	 It's recommended to save the sensitive data like database password to some secure storage (Kubernetes secrets , vault server ,....etc. ) 
 
-## Integration  proposal
+## Integration proposal
 	1. Create offline engine to calculate statistics (please check diagram attached) 
 		 a. Create offline engine to get data form employee database and calculate statistics on the employee data and save it on the statistics warehouse. 
 		 b. This engine will start periodically using cron job or kubernates jobs (daily, hourly, .... etc.) 
