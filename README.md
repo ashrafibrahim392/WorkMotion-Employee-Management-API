@@ -39,7 +39,7 @@ It's need some improvement to be better.
 
 ## Integration proposal
 
-	1. Create offline engine to calculate statistics (please check diagram.PNG) 
+	1. Create offline engine to calculate statistics (please check [Diagram](Diagram.PNG)) 
 		 a. Create offline engine to get data form employee database
              b. Calculate statistics on the employee data and save it on the statistics warehouse. 
 		 c. This engine will start periodically using cron job or 
