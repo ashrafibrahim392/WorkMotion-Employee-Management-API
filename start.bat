@@ -1,0 +1,1 @@
+start /wait run.bat 9999

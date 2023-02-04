@@ -1,0 +1,18 @@
+server:
+  port: 8080
+spring:
+#  datasource:
+#    driverClassName: com.mysql.jdbc.Driver
+#    url: ${db_url}
+#    username: ${db_user}
+#    password: ${db_pass}
+  datasource:
+    url: ${db_url}
+    username:  ${db_user}
+    password:  ${db_pass}
+    driverClassName: org.h2.Driver
+    console.enabled: true
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
