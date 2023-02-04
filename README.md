@@ -42,22 +42,29 @@ For simplicity, I used the local registry to build my docker image instead of pu
 1. Create offline engine to calculate statistics  [Check diagram](Diagram.PNG)
 
      a. Create offline engine to get data form employee database
-         b. Calculate statistics on the employee data and save it on the statistics warehouse. 
-     c. This engine will start periodically using cron job or 
+    
+     b. Calculate statistics on the employee data and save it on the statistics warehouse. 
+     
+     c. This engine will start periodically using cron job or
             kubernates jobs (daily, hourly, .... etc.) 
-     d. Create endpoint (may be separate microservice) to provide the aggregated data 
+     
+     d. Create endpoint (may be separate microservice) to provide the aggregated data
             to the statistics system
 
 2. Make the integration by streams: 
-    a. Employee management API send any updates (add new employee, states change, ... etc. )  
+    
+    a. Employee management API send any updates (add new employee, states change, ... etc. )
             on any employee to the stream 
-    b. Statistics system listen to the stream and update own database 
+    
+    b. Statistics system listen to the stream and update own database
             with the new update (add new employee, states change, ... etc. )
-  Note : This is not recommended because of data redundancy. 
+  
+    Note : This is not recommended because of data redundancy. 
 
 3. Create Rest API to be integration point between the statistics system 
             and employee management API (not recommended)
-   Note : This is not recommended because hage data transactions. 
+   
+    Note : This is not recommended because hage data transactions. 
 
 Note : This proposal is based on the data provided by workmotion and may be changed 
             according to more clarification and business needs.
